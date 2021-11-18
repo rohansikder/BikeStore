@@ -1,0 +1,76 @@
+<!--Created Main Body of the file (RS)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS (RS)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Link CSS (RS)-->
+    <link rel="stylesheet" href="Profile.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <!--Favicon for Browser Tab (RS)-->
+    <link rel="shortcut icon" type="image/x-icon" href="icons8-bicycle-64.ico">
+    <title>JJR Profile</title>
+</head>
+<!--Link Java script (RS)-->
+<script src="Profile.js" defer></script> 
+<body>
+    <!--Button Bringing out the side bar on mobile format(RS)-->
+    <button id="mobile" >
+        <a href="#menu-toggle" id="menu-toggle">SideBar</a>
+    </button>
+    <div class="container-fluid">
+        <!--SIDE BAR: Reference: https://codepen.io/andgatjens/pen/XWJPddE (RS)-->
+        <!--Linking all pages together with sidebar (RS)-->
+        <div id="wrapper">
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">                        
+                        <a href="../Homepage/HomePage.html">
+                            JJR Bikes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Homepage/HomePage.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../Profile/Profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="../About/About.html">About Us and Contact</a>
+                    </li>
+                    <li>
+                        <a href="../Login-Site/Login.html">Back To Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- sidebar-wrapper (RS)-->
+        <!--Name styling (RS)-->
+        <h1> <span class="initials">J</span> <span class="initials" style="letter-spacing: -10px;">J</span> <span class="initials">R</span> Bikes</h1>
+        <br>
+        <h3>Profile</h3>
+        <ul id=profileInfo>
+            <li>
+                <!--Using session storage to show user what details they have used for the account(RS)-->
+                <a>Welcome </a><a id="userName"></a>
+                <br>
+                <a> Hello </a><a id="firstName"></a>  <a id="lastName"></a><a>, Welcome to our small business, Thank you for supporting us!</a>
+                <br>
+                <a>The email you have used with us is </a><a id="email"></a>
+                <br>
+                <!--Button to show user the password they have used(RS)-->
+                <button onclick="showPass()" class="button-styling">Click Me to reveal Password</button>
+                <div id="showPass" id="pass">
+                    <a id="pass"></a>
+                </div>
+            </li>
+        </ul> 
+    </div>
+    <!-- wrapper -->
+</body>
+</html>
