@@ -1,0 +1,327 @@
+<!--Created Main Body of the file (RS)-->
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <!--BootStrap (RS)-->
+    <!-- Required meta tags (RS)-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS (JP)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+    <!--Link CSS (RS)-->
+    <link rel="stylesheet" href="HomePage.css">
+    <!--Favicon for Browser Tab (RS)-->
+    <link rel="shortcut icon" type="image/x-icon" href="icons8-bicycle-64.ico">
+    <title>JJR Bikes</title>
+</head>
+<script src="HomePage.js" defer></script>
+<body>
+  <!--Button Bringing out the side bar on mobile format(RS)-->
+  <button id="mobile" >
+    <a href="#menu-toggle" id="menu-toggle">SideBar</a>
+  </button>
+<!--Button For overlay cart(RS)-->
+  <button onclick="cartOn(),changeVisibility()" id="cart">
+    <span class="glyphicon glyphicon-shopping-cart" ></span> Cart
+  </button>
+  <!-- Container for content (JU,JP,RS) -->
+  <div class="container-fluid">
+    <div id="wrapper">
+      <!--SIDE BAR: Reference: https://codepen.io/andgatjens/pen/XWJPddE (RS)-->
+      <!--Linking all pages together with sidebar (RS)-->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <!--Linking side bar to other pages(RS)_-->
+            <a style="font-size: 16pt;" href="HomePage.html">
+              JJR Bikes
+            </a>  
+          </li>
+          <li>
+              <a href="HomePage.html">Home</a>
+          </li>
+          <li>
+              <!--Scroll user to bikes (RS)-->
+            <a onclick="scrollDown()" >Bikes</a>
+          </li>
+          <li>
+              <a href="Profile/Profile.html">Profile</a>
+          </li>
+          <li>
+              <a href="About/About.html">About Us and Contact</a>
+          </li>
+          <li>
+            <a href="Login-Site/Login.html">Back To Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+      <!-- sidebar-wrapper (JP)-->
+      <div class="row">
+        <!--Scrolling bar at top of page for voucher info(RS)-->  
+        <marquee id="scroll" direction="right" height="100px" vspace="10px" hspace="200px" behavior="alternate">
+          Use code: "JJR" for 10% of your order!
+        </marquee>         
+          <!-- Page Content (JP)-->       
+          <div style="max-width: fit-content; margin: auto;">
+            <p style="text-align: center;font-size: 45pt; margin-bottom: 25px; width: 400px;">
+              Welcome to <br> JJR Bikes
+            </p>
+            <div id="myCarousel" class="carousel slide" style="border-radius: 10px; max-width: 500px; margin: auto; " data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="photos/Carousel/BikeInStreet.jpg"style="width: 100%; height: auto;border-radius: 10px; object-fit: contain;" title="BikeInStreet">
+                  <div class="carousel-caption">
+                    <p>Use code: "JJR" for 10% of your order!</p>
+                  </div>
+                </div>
+                <div class="item">                
+                  <img src="photos/Carousel/BikeSign.jpg" style="width: 100%; height: auto;border-radius: 10px; object-fit: contain;" title="BikeSign">
+                  <div class="carousel-caption">
+                    <p>Use code: "JJR" for 10% of your order!</p>
+                  </div>
+                </div>
+                  
+                <div class="item">                
+                  <img src="photos/Carousel/BikeBySewer.jpg" style="width: 100%; height: auto;border-radius: 10px; object-fit: contain;" title="BikeBySewer">
+                  <div class="carousel-caption">
+                    <p>Use code: "JJR" for 10% of your order!</p>
+                  </div>
+                </div>
+                  
+                <div class="item">                
+                  <img src="photos/Carousel/First_Person_Bike.jpg" style="width: 100%; height: auto;border-radius: 10px; object-fit: contain;" title="First_Person_Bike">
+                  <div class="carousel-caption">
+                    <p>Use code: "JJR" for 10% of your order!</p>
+                  </div>
+                </div>
+  
+                <div class="item">                
+                  <img src="photos/Carousel/Forest_Bike.jpg" style="width: 100%; height: auto;border-radius: 10px; object-fit: contain;" title="Forest_Bike">
+                  <div class="carousel-caption">
+                    <p>Use code: "JJR" for 10% of your order!</p>
+                  </div>
+                </div>
+  
+                <div class="item">                
+                  <img src="photos/Carousel/GirlBySea.jpg" style="width: 100%; height: auto;border-radius: 10px; object-fit: contain;" title="GirlBySea">
+                  <div class="carousel-caption">
+                    <p>Use code: "JJR" for 10% of your order!</p>
+                  </div>
+                </div>
+  
+                <div class="item">                
+                    <img src="photos/Carousel/ManOnMountain.jpg" style="width: 100%; height: auto;border-radius: 10px; object-fit: contain;" title="ManOnMountain">
+                    <div class="carousel-caption">
+                      <p>Use code: "JJR" for 10% of your order!</p>
+                    </div> 
+                </div>                
+              </div><!-- Carousel Inner End (JP)-->                              
+              <!-- Left and right controls (JP)-->
+              <a class="left carousel-control" style="border-radius: 10px;" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" style="border-radius: 10px;" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div><!-- myCarousel end -->
+          </div><!-- Column end -->
+      </div><!--End of row-->
+          <!-- This is the start of cart (JU)-->          
+          <!-- This code is used to display cart when user clicks on button - Reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_overlay_text (JU) --> 
+          <!--<button onclick="cartOn()" id="cart" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-shopping-cart" ></span> Shopping Cart</button>-->           
+          <!-- This code is used to display the items but once the user clicks outside, the overlay turns off - Reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_overlay_text (JU) -->
+      <div id="overlay" onclick="cartOff()">                
+        <div class="col-25">
+          <div class="container-cart">
+            <h4>Cart <span class="price" style="color: black"><i class="fa fa-shopping-cart"></i> <b>Items</b></span></h4>
+            <p><a style="text-decoration: none;" id="emptyCartInfo"></a></p>
+            <p id="item1"><a id="bike1"></a><a id="qtyName1"></a><a id="qty1"></a><span class="price"><a id="price1"></a></span></p>
+            <p id="item2"><a id="bike2"></a><a id="qtyName2"></a><a id="qty2"></a><span class="price"><a id="price2"></a></span></p>
+            <p id="item3"><a id="bike3"></a><a id="qtyName3"></a><a id="qty3"></a><span class="price"><a id="price3"></a></span></p>
+            <p id="item4"><a id="bike4"></a><a id="qtyName4"></a><a id="qty4"></a><span class="price"><a id="price4"></a></span></p>
+            <p id="item5"><a id="bike5"></a><a id="qtyName5"></a><a id="qty5"></a><span class="price"><a id="price5"></a></span></p>
+            <p id="item6"><a id="bike6"></a><a id="qtyName6"></a><a id="qty6"></a><span class="price"><a id="price6"></a></span></p>
+            <p id="item7"><a id="bike7"></a><a id="qtyName7"></a><a id="qty7"></a><span class="price"><a id="price7"></a></span></p>
+            <p id="item8"><a id="bike8"></a><a id="qtyName8"></a><a id="qty8"></a><span class="price"><a id="price8"></a></span></p>
+            <p id="item9"><a id="bike9"></a><a id="qtyName9"></a><a id="qty9"></a><span class="price"><a id="price9"></a></span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black">€<a style="text-decoration: none;" id="sum"></a></span></p>
+            <hr>
+            <p>Voucher can be added at payment page.</p>
+            <button id="ResetInfo" class="btn" onclick="ridOfContents()">Reset</button>
+            <button id="checkout" onclick="checkout()">Checkout</button>
+          </div><!-- End of Container (JU)-->                  
+        </div><!-- End of Column (JU)-->
+      </div><!-- End of Overlay (JU)-->
+      <!-- This is the end of cart (JU)-->    
+  </div>
+  <!--All bike pictures and info where taken form halfords.ie (RS)-->
+  <!-- Divs for all bikes display and info (JU,JP,RS)-->
+  <!--Empty Divs for bootstrap responsive function (JP) => Keep the 12 fractional parts for the columns-->
+  <div class="col-sm-2 col-xs-1"></div>
+  <!-- Content (JU,JP,RS) -->
+  <div class="col-sm-8 col-xs-10" id="bikeDiv">
+    <h2>Road Bikes:</h2>
+    <div class="row-no-gutters">          
+      <div class=" col-xs-12 col-md-4 ">
+        <div class="bikes">
+          <div class="containerBike">
+            <img class="bikephoto" src="Photos/Product/bike1.jpg" alt="Bike 1">
+            <div class="overlayBike">
+              <div class="text"><span style="font-size: 15px"; id="BikeHeading1"></span>
+                <br>Performance, speed and comfort are perfectly combined in the Carrera Vanquish Disc which sits at the top of this exciting range. Thanks to the lightweight, triple-butted aluminium frame, you’ll barely notice the incline and the carbon fork with tapered steerer dampens any vibration and gives you precise steering control. This road bike can fly and you’ll be glad of the flat mount road brakes which do their job whilst reducing weight further. Tackle the straights or the hills with ease on this top-tier road bike.
+              </div>
+            </div>          
+          </div>
+          <div>
+            <td style="padding: 5px;">€540.00 <button class="button-styling" type="submit" id="b1" onclick="check(1)" >Add to Cart</button></td>
+            <td><input type="number" id="i1" name="quantity" min="1" max="5" value="0" title="i1"/> Quantity </td> 
+          </div>
+        </div>                                           
+      </div>
+      <div class=" col-xs-12 col-md-4 ">
+        <div class="bikes">
+          <div class="containerBike">
+            <img class="bikephoto" src="Photos/Product/bike2.jpg" alt="Bike 2">
+            <div class="overlayBike">
+              <div class="text"><span style="font-size: 15px"; id="BikeHeading2"></span>
+                <br>Unleash your inner racer with the Boardman CXR 8.9 Cyclocross Bike.  The durable aluminium CXR frame has an aggressive geometry and is paired with full carbon forks to save weight and help you get up to race speed. Sram Apex 1x11 gearing system is low maintenance and ready for the muddiest of terrains and Sram Apex hydraulic disc brakes will also perform well when you get to those tricky corners and descents. Lightweight Boardman wheels come here with the credible Donnelly Crusade PDX tyres as standard  so you’ll gain plenty of kudos from other cross racers.
+              </div>
+            </div>
+          </div>
+          <div>
+            <td style="padding: 5px;">€1,320.00<button class="button-styling" type="submit" id="b2" name="b2" onclick="check(2)" >Add to Cart</button></td>
+            <td><input type="number" id="i2" name="quantity" min="1" max="5" value="0" title="i2"/> Quantity </td> 
+          </div>
+        </div>                                            
+      </div>
+      <div class=" col-xs-12 col-md-4 ">
+        <div class="bikes">
+          <div class="containerBike">
+            <img class="bikephoto" src="Photos/Product/bike3.jpg" alt="Bike 3">
+            <div class="overlayBike">
+              <div class="text"> <span style="font-size: 15px;" id="BikeHeading3"></span> 
+                <br>The 2021 Boardman ADV 9.0 Carbon has been designed to excel on the UK’s network of bridleways, fire roads and towpaths, while still making rapid progress on tarmac too.  Carefully considered design combined with Boardman’s high-modulus C10 Carbon has yielded a frame tough enough for rough rides, but with a painted weight of 990g including all frame hardware. Excellent ride comfort is achieved with bow-curve seat stays and seat tube cut out allowing movement of the rear axle and seatpost, absorbing impacts and vibration.
+              </div>
+            </div>
+          </div>
+          <div>
+            <td style="padding: 5px;">€2,160.00<button class="button-styling" type="submit" id="b3" onclick="check(3)" >Add to Cart</button></td>   
+            <td><input type="number" id="i3" name="quantity" min="1" max="5" value="0" title="i3"/>Quantity </td>
+          </div>                                   
+        </div>
+      </div>          
+    </div>
+    <h2>Electric Bikes:</h2>
+    <div class="row-no-gutters">         
+      <div class=" col-xs-12 col-md-4 ">
+        <div class="bikes">
+          <div class="containerBike">
+          <img class="bikephoto" src="Photos/Product/bike4.jpg" alt="Bike 4">
+          <div class="overlayBike">
+            <div class="text"><span style="font-size: 15px;" id="BikeHeading4"></span>
+              <br>Conquer every commute and countryside ride with this powerful electric bike. The Carrera Crossfuse E carries a 400Wh Bosch Powerpack battery that gives an impressive assistance range of up to 80 miles. The battery is paired to a Bosch Active Line centre drive motor, with performance enhancing torque sensor that provides natural assistance exactly when you need it, and is positioned for optimum weight distribution, giving the Crossfuse E outstanding stability and agility.
+            </div>
+          </div>
+        </div>
+          <div>
+            <td style="padding: 5px;">€2,279.00 <button class="button-styling" type="submit" id="b4" onclick="check(4)" >Add to Cart</button></td>    
+            <td><input type="number" id="i4" name="quantity" min="1" max="5" value="0"  title="i4"/> Quantity </td> 
+          </div>
+        </div>                                     
+      </div>
+      <div class=" col-xs-12 col-md-4 ">
+        <div class="bikes">
+          <div class="containerBike">
+            <img class="bikephoto" src="Photos/Product/bike5.jpg" alt="Bike 5">
+            <div class="overlayBike">
+              <div class="text"> <span style="font-size:15px;" id="BikeHeading5"></span>
+                <br>The Vitesse Wave Electric Bike not only has a sleek and stylish look but is also feature packed, Starting with its strong but light weight 6061 Alloy traditional step through frame, Integrated in the frame is a Lithium – Ion 6.8ah/36v battery, that gives power to a neatly discrete 250w motor in the rear wheel. The Electronic system is controlled by a crystal clear LCD screen situated on the handlebar, allowing you to keep track of your speed, distance, battery level and assistance level. The Vitesse Wave has a single speed system that makes it easy and a pleasure to ride, also making it easy to maintain.
+              </div>
+            </div>
+          </div>
+          <div>
+            <td style="padding: 5px;">€1,799.00 <button class="button-styling" type="submit" id="b5"  onclick="check(5)" >Add to Cart</button></td> 
+            <td><input type="number" id="i5" name="quantity" min="1" max="5" value="0"  title="i5"/> Quantity </td> 
+          </div>
+        </div>                                        
+      </div>
+      <div class=" col-xs-12 col-md-4 ">
+        <div class="bikes">
+          <div class="containerBike">
+            <img class="bikephoto" src="Photos/Product/bike6.jpg" alt="Bike 6">
+            <div class="overlayBike">
+              <div class="text"><span style="font-size: 15px"; id="BikeHeading6"></span>
+                <br>The Assist Crossbar Hybrid Electric Bike is a great choice for those looking to use an Electric bike for short commutes or leisure rides; with the 209Wh battery offering a range of up to 20 miles from a single charge. This extra power is enough to guarantee effortless rides, taking the strain out of hills and making moving off from a standstill much easier.The assist also features powerful V brakes to increase your stopping power and double wall rims to prevent punctures during day to day use. The Assist Crossbar also comes kitted with full front and rear mudguards, this model also comes with a 2-year warranty on all electrical components.
+              </div>
+            </div>
+          </div>
+          <div>
+            <td style="padding: 5px;">€775.00 <button class="button-styling" type="submit" id="b6" onclick="check(6)" >Add to Cart</button></td>  
+            <td><input type="number" id="i6" name="quantity" min="1" max="5" value="0"  title="i6"/> Quantity </td> 
+          </div>
+        </div>                                          
+      </div>
+    </div>
+    <h2>Mountain Bikes:</h2>
+    <div class="row-no-gutters">           
+      <div class=" col-xs-12 col-md-4 ">
+        <div class="bikes">
+            <div class="containerBike">
+              <img class="bikephoto" src="Photos/Product/bike7.jpg" alt="Bike 7">
+              <div class="overlayBike">
+                <div class="text"><span style="font-size: 15px;" id="BikeHeading7"></span>
+                  <br>This new version of the Carrera Vengeance features a limited edition colourway. It's no surprise that the Carrera Vengeance Mountain Bike is our most popular bike. It has all the fantastic features of the Carrera Valour Mountain Bike including an all new design with wider handlebars, shorter stems and updated geometry. As well as the 2x Shimano drivetrain, the Vengeance also has a larger number of gears making gear shifting even more versatile.
+                </div>
+              </div>
+            </div>
+            <div>
+              <td style="padding: 5px;">€420.00 <button class="button-styling" type="submit" id="b7" onclick="check(7)" >Add to Cart</button></td>  
+              <td><input type="number" id="i7" name="quantity" min="1" max="5" value="0"  title="i7"/> Quantity </td> 
+            </div>
+        </div>                                                  
+      </div>
+      <div class=" col-xs-12 col-md-4">
+        <div class="bikes">
+          <div class="containerBike">
+            <img class="bikephoto" src="Photos/Product/bike8.jpg" alt="Bike 8">
+              <div class="overlayBike">
+                <div class="text"><span style="font-size: 15px"; id="BikeHeading8"></span> 
+                  <br>The new Boardman MTR 8.8 Mountain Bike 2021 features a new 29er platform with revised geometry to back its trail-focused specification. The 8.8 features Rockshox Recon Silver RL forks with 150mm of travel which is paired with a Deluxe Select+ which deliver a confidence inspiring ride. The bike features the new Shimano Deore M5100 1x 11 drivetrain with a huge 11-51T cassette which means the right gear is only ever a few clicks away. You’ll also get a dropper seat post and Shimano MT200 brakes. The new MTRs are built on 29 inch wheels which give fantastic stability and smoothness. They come wearing a set of tubeless-ready Maxxis Minion tyres which give superb grip regardless of how wet and muddy the trails become.
+                </div>
+              </div>
+          </div>
+          <div>
+            <td style="padding: 5px;">€1,740.00 <button class="button-styling" type="submit" id="b8" onclick="check(8)" >Add to Cart</button></td> 
+            <td><input type="number" id="i8" name="quantity" min="1" max="5"  value="0"  title="i8"/> Quantity </td>
+          </div> 
+        </div>                                                
+      </div>
+      <div class=" col-xs-12 col-md-4 " id="target">
+        <div class="bikes">
+          <div class="containerBike">
+            <img class="bikephoto" src="Photos/Product/bike9.jpg" alt="Bike 9">
+              <div class="overlayBike">
+                <div class="text"> <span style="font-size: 15px;" id="BikeHeading9"></span> 
+                  <br>Apollo has a strong reputation in the bike world, creating bikes that offer exceptional value for money without compromising on quality. Featuring a mix of premium components and smart design, the Apollo Phaze builds on this reputation to create a mountain bike that offers performance and durability at an excellent price.
+                </div>
+              </div>
+          </div>
+          <div>
+            <td style="padding: 5px;">€228.00 <button class="button-styling" type="submit" id="b9" onclick="check(9)" >Add to Cart</button></td>
+            <td><input type="number" id="i9" name="quantity" min="1" max="5" value="0" title="i9" /> Quantity </td>
+          </div> 
+        </div>                                             
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2 col-xs-1"></div>
+</body>
+</html>

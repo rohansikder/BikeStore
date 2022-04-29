@@ -1,0 +1,57 @@
+/*Created CSS File (RS)*/
+
+/* body of page (JP) */
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+/* class for the email and password and the buttons alignment (JP) */
+.table{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* class for the middle content of page (JP) */
+.content{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+/* styling for the initials JJR (JP) */
+.initials{
+    font-size: 200%;
+}
+/* styling for "Bikes" on the title (JP) */
+h1{
+    margin-top: 10%;
+    font-size: 250%;
+    margin-bottom: 0%;    
+}
+/* styling for "Login " on the title (JP) */
+h3{
+    margin-bottom: 5%;
+    margin-top: 0%;
+    font-size: 200%;
+}
+/* spacing between elements (JP) */
+td{
+    padding-bottom: 10px;    
+}
+/*Added styling for input boxes such as rounding corners and a box shadow(RS)*/
+.box-styling{
+    padding:10px;
+    border-radius:10px;
+    box-shadow: 3px;
+}
+/*Styling the button for login and creating an account(RS)*/
+.button-styling{
+    padding:4px;
+    border-radius:5px;
+    color:#fff;
+    background-color:#000080; 
+}
