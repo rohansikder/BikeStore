@@ -1,0 +1,198 @@
+/*Created CSS File (RS)*/
+/* body of page (JP) */
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+/* class for the email and password and the buttons alignment (JP) */
+.table{
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 15pt;
+    font-weight: bold;
+}
+/* class for the middle content of page (JP) */
+.content{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+/* styling for the initials JJR (JP) */
+.initials{
+    font-size: 200%;
+}
+/* styling for "Bikes" on the title (JP) */
+h1{
+    margin-top: 10%;
+    font-size: 250%;
+    margin-bottom: 0%;    
+}
+/* styling for "Login " on the title (JP) */
+h3{
+    margin-bottom: 5%;
+    margin-top: 0%;
+    font-size: 200%;
+}
+/* spacing between elements (JP) */
+td{
+    padding-bottom: 10px;    
+}
+/*START OF SIDE BAR: Reference: https://codepen.io/andgatjens/pen/XWJPddE (RS)*/
+
+/* Toggle Styles */
+
+/* Transition time for sidebar  (RS) */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+/*Padding for when sidebar (RS)*/
+#wrapper.toggled {
+    padding-left: 250px;
+}
+/* Sidebar positioning and styling (RS) */
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0.787);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-align: left;
+    font-weight: bold;
+}
+/* Width of sidebar wrapper when toggled (RS) */
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+/* Width and padding for entire contentment wrapper(RS) */
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+/* Width and padding for entire contentment wrapper when toggled(RS) */
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+/* Sidebar Styles */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*Indexing for text in the sidebar(RS)*/
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+/*Text decoration(RS)*/
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #b8b1b1;
+}
+/* Hovering over side bar buttons color changes(RS)*/
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+/*Removing text decoration on active and focus (RS)*/
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+/*Top heading JJR BIKES styling on sidebar(RS)*/
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+/*Top heading JJR BIKES color on sidebar(RS)*/
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+/*Hover JJR BIKES styling on sidebar(RS)*/
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+/* Side bar retracts if side is resized to below 678px for mobile devices (RS) */
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+        opacity: 0.7;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12pt;
+    }
+    /*Padding for when sidebar is in mobile format(RS)*/
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    /*Width for when sidebar is in mobile format(RS)*/
+    #sidebar-wrapper {
+        width: 200px;
+    }
+    /*Sidebar wrapper width toggled(RS)*/
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+    /*Page content when side bar is open(RS)*/
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+    /*Page content when sidebar is closed(RS)*/ 
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+/*END OF SIDE BAR: Reference: https://codepen.io/andgatjens/pen/XWJPddE (RS)*/
+
+/* Bring out side bar in mobile format + STYLING (RS) */
+#mobile {
+	position: fixed; /* Fixed/sticky position */
+	bottom: 10px; /* Place the button at the bottom of the page */
+	right: 10px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+    padding: 5px;
+    background-color:rgba(255, 0, 0, 0);
+	cursor: pointer; /* Add a mouse pointer on hover */
+	font-size: 15px; /* Increase font size */
+    text-decoration: wavy;
+    border-radius: 10px;
+}
+/* Bring out side bar in mobile format + styling(RS) */
+#menu-toggle{
+    padding:6px;
+    border-radius:5px;
+    color:rgb(255, 255, 255);
+    background-color:#000080;
+    float: right;
+    text-decoration: none;
+}

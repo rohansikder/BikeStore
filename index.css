@@ -1,0 +1,337 @@
+/*--Created Main Body of the file (RS)*/
+/*Background Image amd font*/
+/* body of the page (JP) */
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+/* color of a tag (JP)*/
+a {
+    color: #000;
+}
+/* style for h2 tag (JP)*/
+h2{
+    color: #fff;
+    text-align: left;
+}
+/* container for bikes (JP)*/
+#bikeDiv{
+    margin: auto;
+    max-width: 70%;
+    margin-top: 10%;
+}
+/* class for bikes divs (JP) */
+.bikes{
+    border: 2px  skyblue;
+    border-style: outset;
+    padding: 5px;
+    max-width: fit-content; 
+    background-color: white;
+}
+/* class for bikes pictures (JP) */
+.bikephoto{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+/* add to cart button class (RS, JP) */
+.button-styling{
+    padding:4px;
+    border-radius:5px;
+    color:#fff;
+    background-color:#000080;
+    float: right;
+}
+/* Adds no spacing between the bike photos (JP)*/
+.row-no-gutters{
+    width: auto;
+    height: 200px;
+}
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+(RS)
+ */
+ /* class for the overlay inside bike divs (JP) */
+.overlayBike {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 73%;
+    width: 100%;
+    opacity: 0;
+    transition: .6s ease;
+    background-color: #008bbac9;
+    overflow-y: scroll;
+    
+}
+/* adjusts size of overlay for smaller screens (JP) */
+@media(max-width:991px) {
+    .overlayBike{
+        height: 90%;
+    }
+}
+/* container for bikes and overlay (JP) */
+.containerBike{
+    width: fit-content;
+    height: auto;
+}
+/* overlay covers div (JP) */
+.containerBike .overlayBike.show{
+    opacity: 1;
+}
+/* class for text inside bike divs (JP) */
+.text {
+    color: white;
+    font-size: 13px;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    height: 100%;
+    width: 80%;
+    padding: 5px;
+    object-fit: contain;
+}
+/* ////////////////OVERLAY/////////////// */
+/* overlay for shopping cart (JP) */
+.col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+}
+/* container inside the overlay (JP) */
+.container-cart {
+    width: 450px;
+    height: fit-content;
+    margin: auto;
+    background-color: #f2f2f2;
+    padding: 10px 10px 5px 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 20px;
+    opacity: 0.92;
+}
+/* fixing for a tag inside the container (JP) */
+.container-cart a:hover{
+    color: #000;
+}
+/* styling for checkout button (JP) */
+#checkout{
+    margin-left: 40%;
+    background-color:#000080;
+    color: white;
+}
+/* style for reset buttons (JP) */
+#ResetInfo{
+    background-color:#ff0000;
+    color: white;
+}
+/* style for the prices inside the shopping cart (JP) */
+span.price {
+    float: right;
+    color: grey;
+}
+/* set size for boxes (JP) */
+* {
+    box-sizing: border-box;
+}
+/*START OF SIDE BAR: Reference: https://codepen.io/andgatjens/pen/XWJPddE (RS)*/
+/* Toggle Styles */
+/* Transition time for sidebar  (RS) */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+/* Toggled padding (RS) */
+#wrapper.toggled {
+    padding-left: 250px;
+}
+/* Transition affect when toggled(RS)*/
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-align: left;
+}
+/* Width of sidebar wrapper when toggled(RS) */
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+/* Width and padding for entire contentment wrapper(RS) */
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+/* Width and padding for entire contentment wrapper when toggled(RS) */
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+/* Sidebar Styles (RS) */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/*Indexing for text in the sidebar(RS)*/
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+/*Text decoration(RS)*/
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #b8b1b1;
+}
+/* Hovering over side bar buttons color changes(RS)*/
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+/*Removing text decoration on active and focus (RS)*/
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+/*Top heading JJR BIKES styling on sidebar(RS)*/
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+/*Top heading JJR BIKES color on sidebar(RS)*/
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+/*Hover JJR BIKES styling on sidebar(RS)*/
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+/*Format and styling(RS)*/
+/* Side bar retracts if side is resized to below 1134px for mobile devices (RS) */
+@media(min-width:1132px) {
+    #wrapper {
+        padding-left: 250px;
+        opacity: 0.7;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12pt;
+    }
+    /*Padding when sidebar is toggled at specified width(RS)*/
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    /*Sidebar wrapper width(RS)*/
+    #sidebar-wrapper {
+        width: 200px;
+    }
+    /*Sidebar wrapper width toggled(RS)*/
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+    /*Page content when side bar is open(RS)*/
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+    /*Page content when sidebar is closed(RS)*/    
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+/*END OF SIDE BAR: Reference: https://codepen.io/andgatjens/pen/XWJPddE (RS)*/
+
+/* Start of Cart: Reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_overlay_text (JU) */ 
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.767);
+    z-index: 2;
+    cursor: pointer;
+}
+  /*End of Cart: Reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_overlay_text (JU) */ 
+
+/* Bring out side bar in mobile format (RS) */
+#mobile {
+	position: fixed; /* Fixed/sticky position */
+	bottom: 10px; /* Place the button at the bottom of the page */
+	right: 10px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+    padding: 5px;
+    background-color:rgba(255, 0, 0, 0);
+	cursor: pointer; /* Add a mouse pointer on hover */
+	font-size: 15px; /* Increase font size */
+    text-decoration: wavy;
+}
+/*Styling/postilion for the cart button(RS)*/
+#cart {
+	position: fixed; /* Fixed/sticky position */
+    top: 15px; /* Place the button at the bottom of the page */
+	right: 15px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: #ffffff; /* Remove borders */
+	outline: none; /* Remove outline */
+    padding: 10px;
+	cursor: pointer; /* Add a mouse pointer on hover */
+	font-size: 15px; /* Increase font size */
+    text-decoration: rgb(255, 0, 0);
+    border-radius: 10px;
+    background-color: #008bbac9;
+    
+}
+/*Styling for the sidebar button(RS)*/
+#menu-toggle{
+    padding:6px;
+    border-radius:5px;
+    color:rgb(255, 255, 255);
+    background-color:#000080;
+    float: right;
+    text-decoration: none;
+}
+/*Voucher info style(RS)*/
+.carousel-caption{
+    height: 10px;
+    color: #ffffff;
+    text-decoration: bold;
+}
+/*Changes the look of the JJR code message(RS)*/
+#scroll{
+    font-size: 14pt;
+    color: rgb(0, 0, 0);
+    text-decoration: underline rgb(0, 0, 0);
+}
